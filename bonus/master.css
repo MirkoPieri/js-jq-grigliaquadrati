@@ -2,17 +2,38 @@ main {
   background: black;
   height: 100%;
   width: 100%;
+  padding: 20px;
 }
 
 #general {
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
 #general div {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   background: white;
   border: 1px solid black;
+}
+
+.pointsGreen {
+  height: 150px;
+  width: 40%;
+  background-color: white;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  padding: 30px;
+}
+
+.pointsRed {
+  height: 150px;
+  width: 40%;
+  background-color: white;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  padding: 30px;
+
 }

@@ -9,6 +9,8 @@ $( document ).ready(function() {
   var noRipetizione = [];
   var z = [];
   var x;
+  var quadratiRossi = 0;
+  var quadratiVerdi = 0;
 
   // creazione funzione per creare 49 div in html per poi riusare in seguito
   function myfunction(n, t) {
@@ -69,10 +71,15 @@ $( document ).ready(function() {
   // bacground al click del singolo elemento
   $("div .green").click(function() {
     $(this).css("background", "green");
+    quadratiVerdi = quadratiVerdi + 1;
+    $(".pointsGreen").text("Quadrati verdi = " + quadratiVerdi);
   });
 
 
   $("div .red").click(function() {
     $(this).css("background", "red");
+    quadratiRossi = quadratiRossi + 1;
+    $(".pointsRed").text("Quadrati rossi = " + quadratiRossi);
   });
+
 });
