@@ -38,10 +38,10 @@ $( document ).ready(function() {
 
   // for per creare array con numeri casuali all'interno
   for (var i = 0; i < classiQuadrati.length; i++) {
-    var randomClass = Math.floor(Math.random() * (classiQuadrati.length)) + 1;
+    var randomClass = Math.floor(Math.random() * (classiQuadrati.length));
 
     while (noRipetizione.includes(randomClass)) {
-      randomClass = Math.floor(Math.random() * (classiQuadrati.length)) + 1;
+      randomClass = Math.floor(Math.random() * (classiQuadrati.length));
     }
       noRipetizione.push(randomClass);
 
@@ -50,12 +50,10 @@ $( document ).ready(function() {
   console.log(noRipetizione);
 
   // for per inserire a 49 div la classe green
-  for (var i = 0; i < x; i++) {
-    var y = noRipetizione[i];
-
-    z.push(y);
-
+  for (var l = 0; l < 49; l++) {
+    var y = noRipetizione[l];
     $(classiQuadrati[y]).addClass("green");
+    z.push(y);
   }
  console.log(z);
 
@@ -68,4 +66,13 @@ $( document ).ready(function() {
     }
   }
 
+  // bacground al click del singolo elemento
+  $("div .green").click(function() {
+    $(this).css("background", "green");
+  });
+
+
+  $("div .red").click(function() {
+    $(this).css("background", "red");
+  });
 });
